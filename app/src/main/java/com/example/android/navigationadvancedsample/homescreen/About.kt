@@ -43,14 +43,14 @@ class About : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.user_1_btn).setOnClickListener {
             try {
-                findNavController().navigate("www.example.com/user/Donkey")
+                findNavController().navigate(Uri.parse("www.example.com/user/Donkey"))
             } catch (e: Exception) {
                 errorToast(e.localizedMessage)
             }
         }
         view.findViewById<Button>(R.id.user_2_btn).setOnClickListener {
             try {
-                findNavController().navigate("www.example.com/users/Donkey")
+                findNavController().navigate(Uri.parse("www.example.com/users/Donkey"))
             } catch (e: Exception) {
                 errorToast(e.localizedMessage)
             }
